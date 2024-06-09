@@ -3,14 +3,14 @@ name: CD Pipeline
 on:
   workflow_run:
     workflows: ["CI Pipeline"]
-      types:
-        - complete
+    types:
+      - complete
 
 jobs:
 
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Pull Docker image
