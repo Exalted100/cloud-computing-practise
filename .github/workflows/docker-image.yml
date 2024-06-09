@@ -19,6 +19,7 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
     - name: Build the Docker image
-      run: docker build -t cloud-computing-practise:latest .
+      run: docker build -t cloud-computing-practise .
     - name: Push to Dockerhub
+      run: docker tag cloud-computing-practise:latest exalted100/cloud-computing-practise:latest
       run: docker push exalted100/cloud-computing-practise:latest
