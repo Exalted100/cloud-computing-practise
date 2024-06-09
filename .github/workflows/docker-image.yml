@@ -21,5 +21,6 @@ jobs:
     - name: Build the Docker image
       run: docker build -t cloud-computing-practise .
     - name: Push to Dockerhub
-      run: docker tag cloud-computing-practise:latest exalted100/cloud-computing-practise:latest
-      run: docker push exalted100/cloud-computing-practise:latest
+      run: |
+        docker tag cloud-computing-practise:latest exalted100/cloud-computing-practise:latest
+        docker push exalted100/cloud-computing-practise:latest
