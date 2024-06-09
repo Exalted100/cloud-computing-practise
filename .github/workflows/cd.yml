@@ -13,7 +13,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - name: Pull Docker image
+    - name: Pull Docker image 
       run: sudo docker pull exalted100/cloud-computing-practise:latest
     - name: Delete old docker container
       run: sudo docker rm -f cloud-computing-practise-container || true
